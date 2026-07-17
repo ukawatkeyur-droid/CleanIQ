@@ -1,0 +1,378 @@
+body{
+    background:#f8fafc
+    margin:0;
+    padding:20px;
+    font-family:Arial, Helvetica, sans-serif;
+    background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+    min-height:100vh;
+}
+
+.App{
+    width:80%;
+    max-width:900px;
+    margin:40px auto;
+    background:white;
+    border-radius:20px;
+    padding:40px;
+    box-shadow:0 10px 40px rgba(0,0,0,.3);
+}
+
+h1{
+    font-size:60px;
+    color:#2563eb;
+    margin-bottom:5px;
+    text-align:center;
+}
+
+p{
+    text-align:center;
+    color:#666;
+    font-size:20px;
+}
+
+input[type=file]{
+    display:block;
+    margin:25px auto;
+    font-size:17px;
+}
+
+button{
+  background:linear-gradient(135deg,#2563eb,#1d4ed8);
+  color:white;
+  border:none;
+  padding:12px 24px;
+  border-radius:12px;
+  cursor:pointer;
+  font-size:16px;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+button:hover{
+    ransform:translateY(-3px);
+}
+
+h2{
+    color:#2563eb;
+    text-align:center;
+    margin-top:40px;
+}
+
+h3{
+    color:#111827;
+    margin-top:30px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+table th{
+    background:#2563eb;
+    color:white;
+    padding:12px;
+}
+
+table td{
+    padding:10px;
+    border:1px solid #ddd;
+}
+
+table tr:nth-child(even){
+    background:#f5f5f5;
+}
+
+ul{
+    list-style:none;
+    padding:0;
+}
+
+li{
+    background:#eef4ff;
+    margin:8px 0;
+    padding:10px;
+    border-radius:8px;
+}
+
+.download-btn{
+    background:#10b981;
+}
+
+.download-btn:hover{
+    background:#059669;
+}
+
+h1{
+    font-size:70px;
+    color:#1e88e5;
+    margin-bottom:10px;
+    animation: zoomIn 1s ease;
+}
+
+/* ---------- Subtitle ---------- */
+.subtitle{
+    font-size:24px;
+    color:#374151;
+    font-weight:500;
+    text-align:center;
+    margin-bottom:30px;
+}
+
+/* ---------- Fade Animation ---------- */
+.fade-in{
+    opacity:0;
+    animation: fadeIn 2s ease forwards;
+    animation-delay:0.6s;
+}
+
+/* ---------- Animations ---------- */
+@keyframes zoomIn{
+    from{
+        transform:scale(0.8);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Creates a horizontally scrollable area for the table */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc; /* Optional: adds a neat border around the whole table area */
+  border-radius: 4px;     /* Optional: rounds the corners slightly */
+}
+
+/* Ensures the table looks formal and doesn't squish text */
+.table-wrapper table {
+  width: 100%;
+  border-collapse: collapse; 
+  white-space: nowrap; /* Prevents long column headers from wrapping awkwardly */
+}
+
+/* Optional: Polishes the table headers and cells */
+.table-wrapper th, 
+.table-wrapper td {
+  padding: 10px 15px;
+  text-align: left;
+}
+
+
+@media (max-width: 600px) {
+  .App {
+    width: 95%;
+    padding: 20px;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  button {
+    width: 100%;
+  }
+}
+
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --accent: #10b981;
+  --accent-dark: #059669;
+  --text: #374151;
+}
+
+.result-card:hover {
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  transform: translateY(-3px);
+  transition: 0.3s;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid var(--primary);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+  margin: auto;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.missing-zero { color: #10b981; }
+.missing-high { color: #dc2626; font-weight: bold; }
+
+.score-card{
+  background:#0ea5e9;
+  color:white;
+  padding:20px;
+  border-radius:15px;
+  margin:20px 0;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.score-card h1{
+  font-size:48px;
+  margin:10px 0;
+}
+
+.success-card{
+  background:#dcfce7;
+  border-left:5px solid #22c55e;
+  padding:15px;
+  margin:20px 0;
+  border-radius:10px;
+  text-align:left;
+}
+
+.success-card h3{
+  color:#15803d;
+  margin-bottom:10px;
+}
+
+.ai-box{
+  background:#eff6ff;
+  border-left:5px solid #3b82f6;
+  padding:15px;
+  margin-top:20px;
+  border-radius:10px;
+}
+
+.ai-box ul{
+  text-align:left;
+}
+
+.ai-box li{
+  margin:8px 0;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.result-card {
+  animation: fadeUp 0.8s ease;
+}
+
+
+.quality-card {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.4);
+  }
+
+  50% {
+    box-shadow: 0 0 30px rgba(0, 123, 255, 0.8);
+  }
+
+  100% {
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.4);
+  }
+}
+
+
+button {
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.subtitle {
+  animation: sparkle 2s infinite;
+}
+
+@keyframes sparkle {
+  0%,100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.comparison-card{
+    background:#f8fafc;
+    border-left:5px solid #3b82f6;
+    padding:20px;
+    margin:20px 0;
+    border-radius:12px;
+    text-align:left;
+}
+
+.comparison-card h2{
+    margin-bottom:15px;
+}
+
+.comparison-card p{
+    font-size:18px;
+    margin:10px 0;
+}
+
+.hero{
+  background: white;
+  padding:40px;
+  border-radius:20px;
+  text-align:center;
+  margin-bottom:25px;
+  box-shadow:0 10px 25px rgba(0,114,255,0.3);
+}
+
+.hero h1{
+  color:#2563eb;
+  font-size:48px;
+  margin-bottom:10px;
+}
+
+.hero p{
+  color:#64748b;
+  font-size:20px;
+  opacity:0.95;
+}
+
+.hero{
+  background: linear-gradient(135deg,#38bdf8,#2563eb);
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.hero .logo{
+  color: white;
+}
+
+.hero .subtitle{
+  color: white;
+}
