@@ -1,6 +1,7 @@
-import React, { useState, useMemo } from "react";
+import { useState, useMemo } from "react";
 import axios from "axios";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
+import { Analytics } from "@vercel/analytics/react";
 import "./App.css";
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
 
   return (
     <div className="App">
+      <Analytics />
       <div className="container">
         <div className="hero">
         <h1 className="logo">CleanIQ</h1>
