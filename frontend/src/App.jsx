@@ -32,7 +32,7 @@ function App() {
     formData.append("file", file);
 
     try {
-      const response = await axios.post("http://127.0.0.1:8000/upload", formData);
+      const response = await axios.post("https://cleaniq-hlz3.onrender.com/upload", formData);
       setResult(response.data);
     } catch (err) {
       setError(err.response?.data?.detail || "Upload failed. Please check your backend connection.");
